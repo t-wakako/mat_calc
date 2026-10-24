@@ -129,7 +129,7 @@
         <div class="result-item"><span>縦方向の偏芯率</span><strong id="outRatio">0.450</strong></div>
         <div class="result-item"><span>窓上 A（mm）</span><strong id="outA">80.55</strong></div>
         <div class="result-item"><span>窓左 C（mm）</span><strong id="outC">104.00</strong></div>
-        <div class="result-item"><span>窓下（mm）</span><strong id="outBottom">98.45</strong></div>
+        <div class="result-item"><span>窓下 B（mm）</span><strong id="outBottom">98.45</strong></div>
         <div class="result-item"><span>窓右（mm）</span><strong id="outRight">104.00</strong></div>
       </div>
     </section>
@@ -141,6 +141,7 @@
     </div>
     <p class="note">
       A：上端から窓までの位置<br>
+      B：下端から窓までの位置<br>
       C：左端から窓までの位置<br>
       青い窓の内側に、イメージを模式図（山と太陽）で表示します。<br>
       イメージ寸法指定モード(余白あり)では、入力した縦・横それぞれの大きい寸法を図に反映します。<br>
@@ -255,7 +256,7 @@
         <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#eef5fb" stroke="#2468b4" stroke-width="1.5" />
         <rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="1" fill="#fff" stroke="#8998a8" stroke-width="1.2" />
         <g aria-label="イメージの図"><circle cx="${ix + iw * 0.76}" cy="${iy + ih * 0.25}" r="${sunR}" fill="#b8d5e8" /><path d="M ${ix + iconPad} ${iy + ih * 0.82} L ${ix + iw * 0.38} ${iy + ih * 0.42} L ${ix + iw * 0.56} ${iy + ih * 0.62} L ${ix + iw * 0.68} ${iy + ih * 0.49} L ${ix + iw - iconPad} ${iy + ih * 0.82} Z" fill="#c8ddeb" /><path d="M ${ix + iconPad} ${iy + ih * 0.82} L ${ix + iw * 0.38} ${iy + ih * 0.42} L ${ix + iw * 0.56} ${iy + ih * 0.62} L ${ix + iw * 0.68} ${iy + ih * 0.49} L ${ix + iw - iconPad} ${iy + ih * 0.82}" fill="none" stroke="#9dbed4" stroke-width="1" /></g>
-        <g fill="#222" font-family="sans-serif" font-size="13"><text x="8" y="20">A = ${A.toFixed(2)} mm</text><text x="8" y="39">C = ${C.toFixed(2)} mm</text></g>
+        <g fill="#222" font-family="sans-serif" font-size="13"><text x="8" y="20">A = ${A.toFixed(2)} mm</text><text x="8" y="39">B = ${lastResult.bottom.toFixed(2)} mm</text><text x="8" y="58">C = ${C.toFixed(2)} mm</text></g>
         <g font-family="sans-serif" font-size="11" fill="#334155"><text x="${ox + 6}" y="${oy + mh + 18}">マット</text><text x="${Math.max(8, x)}" y="${Math.max(12, y - 5)}" fill="#2468b4">窓</text></g>`;
     }
 
